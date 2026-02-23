@@ -9,8 +9,15 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+        navy: "#0e2a47",
+        "navy-light": "#2a5298",
+        gold: "#D4AF37",
+      },
+      fontFamily: {
+        maistra: ["MaistraDisplay", "serif"],
+        body: ["TyponineSansPro", "Montserrat", "sans-serif"],
+        cormorant: ["Cormorant Garamond", "serif"],
+        montserrat: ["Montserrat", "sans-serif"],
       },
     },
   },

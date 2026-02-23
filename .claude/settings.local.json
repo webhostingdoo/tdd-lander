@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(cd O:\\\\Amity-BH\\\\amity-lander:*)",
+      "Bash(curl:*)"
+    ]
+  }
+}
