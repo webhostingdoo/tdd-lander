@@ -129,6 +129,7 @@ const insuranceBullets = [
 export default function Home() {
   const [activeStep, setActiveStep] = useState<number | null>(null);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [activeLink, setActiveLink] = useState("#");
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
@@ -213,26 +214,90 @@ export default function Home() {
           </div>
         </nav>
 
-        {/* Mobile navigation */}
+        {/* Full overlay navigation */}
         {mobileMenuOpen && (
-          <nav className="lg:hidden border-t border-white/15 bg-navy px-4 pb-4">
-            {navLinks.map((link) => (
-              <a
-                key={link.label}
-                href={link.href}
-                className="block py-3 text-sm tracking-wider uppercase text-white/75 border-b border-white/10"
+          <div className="fixed inset-0 z-[100] flex">
+            {/* LEFT PANEL - white/cream */}
+            <div className="relative z-10 w-full lg:w-[35%] bg-[#f7f5f0] flex flex-col overflow-y-auto">
+
+              {/* Mobile only: hero image at top */}
+              <div className="lg:hidden relative h-[220px] w-full shrink-0">
+                <img
+                  src="/images/hero/amity-2-desktop.jpg"
+                  alt="Amity Palm Beach"
+                  className="w-full h-full object-cover"
+                />
+                {/* Mobile top bar over image */}
+                <div className="absolute inset-x-0 top-0 flex items-center justify-between px-4 py-3 bg-navy/80">
+                  <img src="/images/logos/amity-logo.png" alt="Amity Palm Beach" className="h-8 w-auto" />
+                  <a href="tel:+17275098278" className="px-4 py-2 text-sm font-semibold bg-navy text-white rounded">
+                    (727) 509-8278
+                  </a>
+                  <button onClick={() => setMobileMenuOpen(false)} className="text-white text-2xl p-1">{"\u2715"}</button>
+                </div>
+              </div>
+
+              {/* Desktop logo area */}
+              <div className="hidden lg:flex items-start gap-3 px-10 pt-10 pb-6">
+                <img src="/images/logos/amity-logo.png" alt="Amity Palm Beach" className="h-10 w-auto" />
+              </div>
+
+              {/* Title + stars - desktop only */}
+              <div className="hidden lg:block px-10 pb-8">
+                <p className="text-xs tracking-[0.2em] uppercase text-gray-500 mb-1">Amity Palm Beach</p>
+                <div className="flex gap-1">
+                  {[...Array(5)].map((_, i) => (
+                    <svg key={i} width="14" height="14" viewBox="0 0 24 24" fill="#D4AF37">
+                      <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26" />
+                    </svg>
+                  ))}
+                </div>
+              </div>
+
+              {/* Nav links */}
+              <nav className="flex flex-col px-8 lg:px-10 py-4 lg:py-0 gap-1">
+                {navLinks.map((link) => (
+                  <a
+                    key={link.label}
+                    href={link.href}
+                    onClick={() => { setActiveLink(link.href); setMobileMenuOpen(false); }}
+                    className={`py-4 text-lg font-light border-b border-gray-200 transition-colors ${
+                      activeLink === link.href ? "text-[#0e2a47] font-semibold" : "text-gray-600 hover:text-[#0e2a47]"
+                    }`}
+                  >
+                    {link.label}
+                  </a>
+                ))}
+              </nav>
+
+              {/* Bottom link */}
+              <div className="px-8 lg:px-10 mt-6">
+                <div className="border-t border-gray-300">
+                  <a href="#" className="flex items-center justify-between py-5 text-xl font-light text-gray-800 hover:text-[#0e2a47] transition-colors">
+                    <span>Amity Palm Beach</span>
+                    <span className="text-2xl">&rarr;</span>
+                  </a>
+                  <div className="border-t border-gray-300"></div>
+                </div>
+              </div>
+            </div>
+
+            {/* RIGHT PANEL - hero image, desktop only */}
+            <div className="hidden lg:block flex-1 relative">
+              <img
+                src="/images/hero/amity-2-desktop.jpg"
+                alt="Amity Palm Beach"
+                className="w-full h-full object-cover"
+              />
+              {/* X close button */}
+              <button
                 onClick={() => setMobileMenuOpen(false)}
+                className="absolute top-6 right-6 w-12 h-12 rounded-full bg-white/20 backdrop-blur-sm text-white text-xl flex items-center justify-center hover:bg-white/30 transition"
               >
-                {link.label}
-              </a>
-            ))}
-            <a
-              href="tel:+17275098278"
-              className="block mt-4 text-center py-3 rounded font-semibold bg-gold text-navy sm:hidden"
-            >
-              (727) 509-8278
-            </a>
-          </nav>
+                {"\u2715"}
+              </button>
+            </div>
+          </div>
         )}
       </header>
 
