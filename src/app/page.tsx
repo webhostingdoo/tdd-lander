@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Image from "next/image";
 
 /* ─── Navigation ─── */
@@ -129,11 +129,22 @@ const insuranceBullets = [
 export default function Home() {
   const [activeStep, setActiveStep] = useState<number | null>(null);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 10);
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
 
   return (
     <>
       {/* ═══════════════════════ HEADER ═══════════════════════ */}
-      <header className="sticky top-0 z-50 bg-navy">
+      <header
+        className={`fixed top-0 left-0 right-0 z-50 transition-colors duration-300 ${
+          scrolled ? "bg-navy/95 backdrop-blur-sm" : "bg-transparent"
+        }`}
+      >
         {/* Top bar */}
         <div className="max-w-7xl mx-auto flex items-center justify-between px-4 lg:px-8 py-3">
           <a href="#" className="shrink-0">
@@ -147,39 +158,58 @@ export default function Home() {
             />
           </a>
 
-          <span className="hidden xl:block text-white font-maistra text-lg tracking-wide">
-            Amity Palm Beach
-          </span>
+          {/* Logo + title group */}
+          <div className="hidden lg:flex items-center gap-4 ml-4">
+            <div className="w-px h-8 bg-white/30" />
+            <div className="flex items-center gap-3">
+              <span className="text-white font-maistra text-base tracking-widest uppercase">
+                Amity Palm Beach
+              </span>
+              <div className="flex items-center gap-0.5">
+                {[...Array(5)].map((_, i) => (
+                  <svg key={i} width="12" height="12" viewBox="0 0 24 24" fill="currentColor" className="text-gold">
+                    <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26" />
+                  </svg>
+                ))}
+              </div>
+            </div>
+          </div>
 
-          <div className="flex items-center gap-3">
-            <a
-              href="tel:+17275098278"
-              className="hidden sm:inline-block px-5 py-2.5 text-sm font-semibold rounded bg-gold text-navy hover:brightness-110 transition"
-            >
-              (727) 509-8278
-            </a>
+          {/* Spacer to push mobile button right */}
+          <div className="flex items-center gap-3 ml-auto">
             <button
-              className="lg:hidden text-white text-2xl p-2"
+              className="block text-white text-2xl p-2"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               aria-label="Toggle menu"
             >
-              {mobileMenuOpen ? "\u2715" : "\u2630"}
+              <div className="flex flex-col gap-1.5">
+                <span className="block w-6 h-px bg-white"></span>
+                <span className="block w-6 h-px bg-white"></span>
+              </div>
             </button>
           </div>
         </div>
 
         {/* Desktop navigation bar */}
-        <nav className="hidden lg:block border-t border-white/15">
-          <div className="max-w-7xl mx-auto flex gap-8 px-8 py-3">
-            {navLinks.map((link) => (
-              <a
-                key={link.label}
-                href={link.href}
-                className="text-xs tracking-[0.15em] uppercase text-white/75 hover:text-white transition-colors"
-              >
-                {link.label}
-              </a>
-            ))}
+        <nav className="hidden lg:block border-t border-b border-white/15">
+          <div className="max-w-7xl mx-auto flex justify-between items-center px-8 h-[44px]">
+            <div className="flex items-center gap-6">
+              {navLinks.map((link) => (
+                <a
+                  key={link.label}
+                  href={link.href}
+                  className="text-xs tracking-[0.15em] uppercase text-white/75 hover:text-white transition-colors"
+                >
+                  {link.label}
+                </a>
+              ))}
+            </div>
+            <a
+              href="tel:+17275098278"
+              className="px-5 py-2.5 text-sm font-semibold rounded bg-gold text-navy hover:brightness-110 transition whitespace-nowrap"
+            >
+              (727) 509-8278
+            </a>
           </div>
         </nav>
 
