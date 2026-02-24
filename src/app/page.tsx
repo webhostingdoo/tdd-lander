@@ -1,5 +1,3 @@
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
 import Hero from "@/components/sections/Hero";
 import Process from "@/components/sections/Process";
 import InsuranceCoverage from "@/components/sections/InsuranceCoverage";
@@ -14,31 +12,16 @@ import LeadForm from "@/components/sections/LeadForm";
 export default function Home() {
   return (
     <>
-      <Header />
-
-      <main>
-        <Hero />
-
-        <Process />
-
-        <InsuranceCoverage />
-
-        <TestimonialQuote />
-
-        <BreakTheAddiction />
-
-        <FacilitiesSlider />
-
-        <Accommodations />
-
-        <TreatmentCards />
-
-        <InsuranceLogos />
-
-        <LeadForm />
-      </main>
-
-      <Footer />
+      <Hero />
+      <Process />
+      <InsuranceCoverage />
+      <TestimonialQuote />
+      <BreakTheAddiction />
+      <FacilitiesSlider />
+      <Accommodations />
+      <TreatmentCards />
+      <InsuranceLogos />
+      <LeadForm />
     </>
   );
 }
