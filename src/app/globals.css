@@ -70,3 +70,42 @@ body {
 .nav-link.active::after {
   width: 100%;
 }
+
+.quote-section {
+  position: relative;
+  overflow: hidden;
+  padding: 8rem 0;
+  background-color: #F7F5F2;
+}
+
+.quote-watermark {
+  position: absolute;
+  top: -30px;
+  left: 1rem;
+  font-family: var(--font-cormorant);
+  font-size: 18rem;
+  line-height: 1;
+  color: rgba(0,0,0,0.04);
+  pointer-events: none;
+  user-select: none;
+}
+
+.quote-text {
+  font-family: var(--font-cormorant);
+  font-size: clamp(1.75rem, 4vw, 3.5rem);
+  font-style: italic;
+  line-height: 1.5;
+  color: #2a3a4e;
+  margin-bottom: 2rem;
+}
+
+.quote-name {
+  font-weight: 600;
+  font-size: 1.125rem;
+  color: #0e2a47;
+}
+
+.quote-title {
+  font-size: 0.875rem;
+  color: #6b7280;
+}
