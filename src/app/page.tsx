@@ -562,14 +562,25 @@ export default function Home() {
                     </li>
                   ))}
                 </ul>
-                <a
-                  href="tel:+17275098278"
-                  className="inline-block px-8 py-4 text-center font-semibold rounded btn-primary transition"
-                >
-                  <span className="text-lg">(727) 509-8278</span>
-                  <br />
-                  <span className="text-sm font-normal">Call for Free Assessment</span>
-                </a>
+                <div className="flex flex-col sm:flex-row items-center gap-4">
+                  <a
+                    href="tel:+17275098278"
+                    className="inline-block px-8 py-4 text-center font-semibold rounded btn-primary transition"
+                  >
+                    <span className="text-lg">(727) 509-8278</span>
+                    <br />
+                    <span className="text-sm font-normal">Call for Free Assessment</span>
+                  </a>
+                  <span className="text-white/50 text-sm uppercase tracking-widest">or</span>
+                  <a
+                    href="#verify-form"
+                    className="inline-block px-8 py-4 text-center font-semibold rounded border-2 border-white text-white hover:bg-white/10 transition"
+                  >
+                    <span className="text-lg uppercase">Verify Your Benefits</span>
+                    <br />
+                    <span className="text-sm font-normal text-white/75 uppercase">Quick &amp; Confidential</span>
+                  </a>
+                </div>
               </div>
               <Image
                 src="/images/gallery/amity-group-therapy.jpg"
@@ -586,7 +597,7 @@ export default function Home() {
 
         {/* ═══════════════════ TESTIMONIAL QUOTE ═══════════════════ */}
         <section
-          className="py-20 md:py-28 relative overflow-hidden"
+          className="py-32 md:py-44 relative overflow-hidden"
           style={{ backgroundColor: "#F7F5F2" }}
         >
           <div
@@ -598,7 +609,7 @@ export default function Home() {
           </div>
           <div className="relative max-w-4xl mx-auto px-4 md:px-8 text-center">
             <blockquote
-              className="font-cormorant text-3xl md:text-4xl lg:text-5xl italic leading-relaxed mb-8"
+              className="font-cormorant text-3xl md:text-5xl lg:text-[3.5rem] italic leading-relaxed mb-8"
               style={{ color: "#2a3a4e" }}
             >
               &ldquo;Discharge is not the end; it is a clinical transition. We
