@@ -16,8 +16,8 @@ const processSteps = [
     title: "Speak with a Specialist",
     description:
       "Connect with a compassionate intake coordinator who will listen to your story and answer all your questions privately.",
-    cta: "Call 727-509-8278",
-    href: "tel:+17275098278",
+    cta: "Call 866-971-7393",
+    href: "tel:+18669717393",
   },
   {
     number: "03",

@@ -4,25 +4,25 @@ import Image from "next/image";
 
 const facilityCards = [
   {
-    name: "Amity Palm Beach FL",
-    location: "Palm Beach FL",
+    name: "Tru Dallas Detox FL",
+    location: "Dallas TX",
     image: "/images/gallery/amity-palm%20beach-slide.jpg",
     description:
-      "Our mission at Amity Palm Beach is to empower individuals to achieve lasting recovery through addiction treatment in Palm Beach and providing personalized treatment plans tailored to each client\u2019s unique needs.",
+      "Our mission at Tru Dallas Detox is to empower individuals to achieve lasting recovery through addiction treatment in Dallas and providing personalized treatment plans tailored to each client\u2019s unique needs.",
   },
   {
-    name: "Amity Huntington Beach CA",
+    name: "Tru Dallas Detox Huntington Beach CA",
     location: "Huntington Beach, CA",
     image: "/images/gallery/amity-3-slide.jpg",
     description:
-      "Located in the restorative coastal community of Huntington Beach, Amity offers a calm, grounding atmosphere essential for early recovery. Our facility utilizes this serene setting to help patients disconnect from stress and focus entirely on their clinical treatment plan.",
+      "Located in the restorative coastal community of Huntington Beach, Tru Dallas Detox offers a calm, grounding atmosphere essential for early recovery. Our facility utilizes this serene setting to help patients disconnect from stress and focus entirely on their clinical treatment plan.",
   },
   {
-    name: "Amity San Diego CA",
+    name: "Tru Dallas Detox San Diego CA",
     location: "San Diego, CA",
     image: "/images/gallery/amity-2-slide.jpg",
     description:
-      "Amity San Diego is a holistic, evidence-based drug and alcohol treatment center located in beautiful San Diego, California. We combine evidence-based practices with holistic therapies to address the physical, emotional, and spiritual aspects of addiction.",
+      "Tru Dallas Detox San Diego is a holistic, evidence-based drug and alcohol treatment center located in beautiful San Diego, California. We combine evidence-based practices with holistic therapies to address the physical, emotional, and spiritual aspects of addiction.",
   },
 ];
 
@@ -67,7 +67,7 @@ export default function FacilitiesSlider() {
                   {card.description}
                 </p>
                 <a
-                  href="tel:+17275098278"
+                  href="tel:+18669717393"
                   className="inline-block text-center px-6 py-3 rounded border border-white/30 text-white text-sm font-semibold hover:bg-white/10 transition"
                 >
                   Contact Admissions

@@ -10,7 +10,7 @@ export default function Footer() {
         <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-8 mb-10">
           {/* Left: Logo + certifications */}
           <div>
-            <Image src="/images/logos/amity-logo.png" alt="Amity Palm Beach" width={250} height={50} quality={80} className="w-[200px] h-auto mb-6" />
+            <Image src="/images/logos/amity-logo.png" alt="Tru Dallas Detox" width={250} height={50} quality={80} className="w-[200px] h-auto mb-6" />
             <p className="text-white/50 text-sm mb-2">Licensed and Certified by:</p>
             <p className="text-white/75 text-sm mb-1">The Joint Commission Accredited</p>
             <p className="text-white/75 text-sm mb-4">LegitScript Certified</p>
@@ -24,9 +24,9 @@ export default function Footer() {
               <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/>
             </svg>
             <div>
-              <p className="text-white font-semibold text-sm">Amity Palm Beach</p>
+              <p className="text-white font-semibold text-sm">Tru Dallas Detox</p>
               <p className="text-white/60 text-sm">2901 Broadway</p>
-              <p className="text-white/60 text-sm">West Palm Beach, FL 33407</p>
+              <p className="text-white/60 text-sm">Dallas, TX</p>
             </div>
           </a>
         </div>
@@ -34,7 +34,7 @@ export default function Footer() {
         {/* Certification seals */}
         <div className="flex items-center gap-6 mb-10">
           <Image src="/images/logos/jointcommission.webp" alt="Joint Commission Accredited" width={100} height={100} className="h-16 w-auto opacity-90" />
-          <a href="https://www.legitscript.com/websites/?checker_keywords=amitypb.com" target="_blank" rel="noopener noreferrer">
+          <a href="https://www.legitscript.com/websites/?checker_keywords=dallasdetox.com" target="_blank" rel="noopener noreferrer">
             <Image src="/images/logos/45265114.png" alt="LegitScript Certified" width={100} height={100} className="h-16 w-auto opacity-90 hover:opacity-100 transition" />
           </a>
         </div>

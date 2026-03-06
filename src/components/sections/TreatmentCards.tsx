@@ -6,7 +6,7 @@ const treatmentCards = [
   {
     title: "Medical Drug & Alcohol Detox",
     image: "/images/gallery/Amiti-Palm-Beach-Detox-facility.jpg",
-    alt: "Drug and Alcohol Detox - Palm Beach, FL",
+    alt: "Drug and Alcohol Detox - Dallas, TX",
     description:
       "A clinically supervised process to manage withdrawal safely and comfortably. Our medical professionals provide 24/7 care, ensuring a stable foundation for your addiction recovery journey.",
   },

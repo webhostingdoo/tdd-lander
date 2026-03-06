@@ -69,10 +69,10 @@ export default function InsuranceCoverage() {
             </ul>
             <div className="flex flex-col sm:flex-row items-center gap-4">
               <a
-                href="tel:+17275098278"
+                href="tel:+18669717393"
                 className="inline-block px-8 py-4 text-center font-semibold rounded btn-primary transition"
               >
-                <span className="text-lg">(727) 509-8278</span>
+                <span className="text-lg">(866) 971-7393</span>
                 <br />
                 <span className="text-sm font-normal">Call for Free Assessment</span>
               </a>

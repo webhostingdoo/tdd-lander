@@ -20,14 +20,14 @@ const montserrat = Montserrat({
 });
 
 export const metadata: Metadata = {
-  title: "Drug & Alcohol Detox and Rehab Treatment Centers | Amity Palm Beach",
+  title: "Drug & Alcohol Detox and Rehab Treatment Centers | Tru Dallas Detox",
   description:
-    "Amity Palm Beach is committed to improving the lives of individuals who are struggling with mental health and Addiction.",
+    "Tru Dallas Detox is committed to improving the lives of individuals who are struggling with mental health and Addiction.",
   openGraph: {
     type: "website",
     title: "Drug & Alcohol Detox and Rehab Treatment Centers",
     description:
-      "Amity Palm Beach is committed to improving the lives of individuals who are struggling with mental health and addiction.",
+      "Tru Dallas Detox is committed to improving the lives of individuals who are struggling with mental health and addiction.",
     images: ["/images/hero/tdd-hero-desktop.jpg"],
   },
 };

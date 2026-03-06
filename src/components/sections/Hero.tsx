@@ -55,10 +55,10 @@ export default function Hero() {
         {/* CTA Buttons */}
         <div className="flex flex-col sm:flex-row gap-4 mb-12 items-start">
           <a
-            href="tel:+17275098278"
+            href="tel:+18669717393"
             className="inline-block px-8 py-4 text-center font-semibold rounded btn-primary transition"
           >
-            <span className="text-xl uppercase">(727) 509-8278</span>
+            <span className="text-xl uppercase">(866) 971-7393</span>
             <br />
             <span className="text-base font-normal uppercase">
               Call for Free Assessment

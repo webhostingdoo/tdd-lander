@@ -58,12 +58,12 @@ export default function Accommodations() {
               emotionally, and mentally.
             </p>
             <a
-              href="tel:+17275098278"
+              href="tel:+18669717393"
               className="inline-block px-8 py-4 text-center font-semibold rounded btn-primary transition"
             >
               Call for Immediate Admissions
               <br />
-              <span className="text-sm font-normal">(727) 509-8278</span>
+              <span className="text-sm font-normal">(866) 971-7393</span>
             </a>
           </div>
         </div>
