@@ -21,7 +21,7 @@ export default function InsuranceCoverage() {
               Medical Detox &amp; Residential Treatment
             </h2>
             <p className="text-white/75 text-xl leading-relaxed">
-              Our inpatient program is built for immediate placement — no waitlists, no runaround. If you're ready, we're ready.
+              Our inpatient program is built for immediate placement — no waitlists, no runaround. If you&apos;re ready, we&apos;re ready.
             </p>
             <p className="text-white/75 text-xl leading-relaxed mt-4">
               From acute medical detox through full residential care, every level of treatment is under one roof.
@@ -70,7 +70,7 @@ export default function InsuranceCoverage() {
               Your PPO Plan Was Made for This
             </h3>
             <p className="text-white/75 text-lg leading-relaxed mb-8">
-              Most PPO plans cover the full cost of inpatient detox and residential treatment. We verify your benefits in minutes, handle the paperwork, and make sure you're using every dollar your plan allows — so you can focus on one thing.
+              Most PPO plans cover the full cost of inpatient detox and residential treatment. We verify your benefits in minutes, handle the paperwork, and make sure you&apos;re using every dollar your plan allows — so you can focus on one thing.
             </p>
             <ul className="space-y-3 mb-10">
               {[
